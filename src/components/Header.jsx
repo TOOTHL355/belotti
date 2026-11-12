@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import Logo from './Logo.jsx';
 import LanguageToggle from './ui/LanguageToggle.jsx';
 import { useLanguage } from '../context/LanguageContext.jsx';
 import { NAV, CENTERS, SITE } from '../data.js';
@@ -33,7 +32,7 @@ export default function Header() {
       <a className="skip" href="#main">{t('site.skip')}</a>
       <div className="header-inner">
         <a href={SITE + '/'} className="brand" aria-label={t('site.home')}>
-          <Logo className="brand-logo" />
+          <img className="brand-logo" src="/brand/belotti-eyewear-perfume-logo.png" alt="Belotti Eyewear & Perfume" width="2170" height="725" />
         </a>
 
         <nav className="nav" aria-label={t('site.mainNav')}>
