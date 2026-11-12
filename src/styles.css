@@ -156,7 +156,26 @@ button { font: inherit; color: inherit; cursor: pointer; background: none; borde
   transition: height 0.35s var(--ease);
 }
 .is-scrolled .header-inner { height: 68px; }
-.brand { display: block; flex-shrink: 0; }
+.brand { display: inline-flex; align-items: center; gap: 14px; flex-shrink: 0; text-decoration: none; }
+.brand-sep {
+  width: 1.5px;
+  height: 28px;
+  background: var(--muted);
+  border-radius: 1px;
+  transition: height 0.35s var(--ease);
+}
+.is-scrolled .brand-sep { height: 24px; }
+.brand-since {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 1;
+  color: var(--ink);
+  white-space: nowrap;
+  transition: font-size 0.35s var(--ease);
+}
+.is-scrolled .brand-since { font-size: 19px; }
 .brand-logo { height: 56px; width: auto; transition: height 0.35s var(--ease); }
 .is-scrolled .brand-logo { height: 46px; }
 
@@ -771,6 +790,8 @@ a.card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
 @media (max-width: 820px) {
   :root { --header-h: 72px; }
   .brand-logo { height: 40px; }
+  .brand-since { font-size: 17px; }
+  .brand-sep { height: 22px; }
   .hero-stage { border-radius: 24px; }
   .slide, .slide-plum { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto auto; min-height: 0; }
   .slide-media { order: -1; aspect-ratio: 4 / 3; }
@@ -786,6 +807,9 @@ a.card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
 }
 @media (max-width: 600px) {
   .brand-logo, .is-scrolled .brand-logo { height: 34px; }
+  .brand { gap: 6px; }
+  .brand-since, .is-scrolled .brand-since { font-size: 14px; }
+  .brand-sep, .is-scrolled .brand-sep { height: 18px; }
   .header-inner { gap: 12px; }
   .header-actions { gap: 8px; }
   .cat-grid { grid-template-columns: 1fr; }

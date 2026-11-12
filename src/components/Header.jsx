@@ -33,6 +33,8 @@ export default function Header() {
       <div className="header-inner">
         <a href={SITE + '/'} className="brand" aria-label={t('site.home')}>
           <img className="brand-logo" src="/brand/belotti-eyewear-perfume-logo.png" alt="Belotti Eyewear & Perfume" width="2170" height="725" />
+          <span className="brand-sep" aria-hidden="true" />
+          <span className="brand-since">since 1988</span>
         </a>
 
         <nav className="nav" aria-label={t('site.mainNav')}>
